@@ -1,0 +1,37 @@
+<view class="div">
+<view class="head">报餐统计</view>
+<view class="vw">
+    <label for="" class="font14" class="cs">当前日期</label>
+    <label for="" class="font14" class="cs">{{Y}}年{{M}}月{{D}}日</label>
+  </view>
+<view class="vw2">
+  <view class="vw">
+    <label for="" class="font14" class="cs">早餐统计人数</label>
+    <label for="" class="font14" class="cs">{{morningNum}}</label>
+  </view>
+  <view class="vw">
+    <label for="" class="font14" class="cs">晚餐统计人数</label>
+    <label for="" class="font14" class="cs">{{lunchNum}}</label>
+  </view>
+</view>
+<!-- <view  wx:for="{{list}}" wx:key="id">
+  <view class="vw2">
+  <view class="vw">
+    <label for="" class="font14" class="cs">姓名</label>
+    <label for="" class="font14" class="cs">{{item.name}}</label>
+  </view>
+  <view class="vw">
+    <label for="" class="font14" class="cs">部门</label>
+    <label for="" class="font14" class="cs">{{item.department}}</label>
+  </view>
+  <view class="vw">
+    <label for="" class="font14" class="cs">餐种</label>
+    <label for="" class="font14" class="cs">{{item.gender}}</label>
+  </view>
+</view>
+</view> -->
+</view>
+
+
+<button bindtap="shuaxin" class="button01">刷新</button>
+

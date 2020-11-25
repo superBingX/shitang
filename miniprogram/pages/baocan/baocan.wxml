@@ -1,0 +1,36 @@
+<radio-group bindchange="handleChange">
+  <view>请选择用餐种类</view>
+  <view><radio value="早餐">早餐</radio><radio value="午餐">午餐</radio></view>
+</radio-group>
+<view>请输入您的姓名</view>
+<input type="text" class="input-search" bindchange="setName"/>
+<view>请选择您的部门</view>
+
+<!-- <view>
+  您选中的是：{{gender}}
+</view> -->
+
+<view class='list-msg'>
+<!--下拉框  -->
+    <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{department}}</text>
+    </view>
+<!-- 下拉需要显示的列表 -->
+    <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" bindtap="mySelect" data-name="总行领导">总行领导</view>
+        <view class="select_one" bindtap="mySelect" data-name="综合管理部">综合管理部</view>
+        <view class="select_one" bindtap="mySelect" data-name="业务拓展部">业务拓展部</view>
+        <view class="select_one" bindtap="mySelect" data-name="金融市场部">金融市场部</view>
+        <view class="select_one" bindtap="mySelect" data-name="运营管理部">运营管理部</view>
+        <view class="select_one" bindtap="mySelect" data-name="审计稽核部">审计稽核部</view>
+        <view class="select_one" bindtap="mySelect" data-name="计划财务部">计划财务部</view>
+        <view class="select_one" bindtap="mySelect" data-name="信息科技部">信息科技部</view>
+        <view class="select_one" bindtap="mySelect" data-name="信贷管理部">信贷管理部</view>
+        <view class="select_one" bindtap="mySelect" data-name="法律合规部">法律合规部</view>
+        <view class="select_one" bindtap="mySelect" data-name="安全保卫部">安全保卫部</view>
+        <view class="select_one" bindtap="mySelect" data-name="人力资源部">人力资源部</view>
+        <view class="select_one" bindtap="mySelect" data-name="纪检监察室">纪检监察室</view>
+        <view class="select_one" bindtap="mySelect" data-name="资产管理中心">资产管理中心</view>
+    </view>
+</view>
+<button  bindtap="submit" plain>提交</button>
