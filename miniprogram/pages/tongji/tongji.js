@@ -18,7 +18,6 @@ Page({
    */
   onLoad: function (options) {
     this.shuaxin();
-    
     this.getTime();
     const db = wx.cloud.database();
     //查询集合shitang中的数据   
