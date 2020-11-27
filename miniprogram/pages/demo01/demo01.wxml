@@ -17,6 +17,8 @@
  <button type="primary"> primary 按钮</button> 
 
 
+
+
  
  <button type="warn"> warn 按钮</button> 
  <button type="warn" plain> plain 按钮</button> 
