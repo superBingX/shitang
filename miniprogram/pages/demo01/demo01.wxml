@@ -15,6 +15,9 @@
  <button>默认按钮</button>
  <button size="mini">  mini 默认按钮</button>
  <button type="primary"> primary 按钮</button> 
+
+
+ 
  <button type="warn"> warn 按钮</button> 
  <button type="warn" plain> plain 按钮</button> 
  <button type="primary" loading> loading 按钮</button> 
