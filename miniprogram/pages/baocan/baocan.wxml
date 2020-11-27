@@ -1,14 +1,16 @@
-<radio-group bindchange="handleChange">
-  <view>请选择用餐种类</view>
-  <view><radio value="早餐">早餐</radio><radio value="午餐">午餐</radio></view>
-</radio-group>
-<view>请输入您的姓名</view>
-<input type="text" class="input-search" bindchange="setName"/>
-<view>请选择您的部门</view>
+<view class='view01'>
+  <radio-group bindchange="handleChange">
+    <view>请选择用餐种类</view>
+    <view><radio value="早餐">早餐</radio><radio value="午餐">午餐</radio></view>
+  </radio-group>
+</view>
+<view class='view01'>
+  <view>请输入您的姓名</view>
+  <input type="text" class="input-search" bindchange="setName"/>
+</view>
 
-<!-- <view>
-  您选中的是：{{gender}}
-</view> -->
+<view class='view01'>
+<view>请选择您的部门</view>
 
 <view class='list-msg'>
 <!--下拉框  -->
@@ -33,4 +35,5 @@
         <view class="select_one" bindtap="mySelect" data-name="资产管理中心">资产管理中心</view>
     </view>
 </view>
-<button  bindtap="submit" plain>提交</button>
+</view>
+<button  bindtap="submit" class='button'>提交</button>
