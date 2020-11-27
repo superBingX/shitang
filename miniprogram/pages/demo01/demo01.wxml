@@ -15,6 +15,11 @@
  <button>默认按钮</button>
  <button size="mini">  mini 默认按钮</button>
  <button type="primary"> primary 按钮</button> 
+
+
+
+
+ 
  <button type="warn"> warn 按钮</button> 
  <button type="warn" plain> plain 按钮</button> 
  <button type="primary" loading> loading 按钮</button> 
@@ -41,7 +46,7 @@
     1 授权页面中 只会出现 用户曾经点击过的 权限 
   7 feedback 打开 小程序内置的 意见反馈页面 
     1 只能够通过真机调试来打开 
-    
+
 
   -->
 <button open-type="contact">contact</button>
