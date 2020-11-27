@@ -10,7 +10,8 @@
     <label for="" class="font14" class="cs">{{morningNum}}</label>
   </view>
   <view class="vw">
-    <label for="" class="font14" class="cs">晚餐统计人数</label>
+    <label for="" class="font14" class="cs">午餐统计人数</label>
+    
     <label for="" class="font14" class="cs">{{lunchNum}}</label>
   </view>
 </view>

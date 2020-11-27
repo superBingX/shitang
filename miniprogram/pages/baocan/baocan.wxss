@@ -66,7 +66,7 @@
   width: 100%;
   position: absolute;
   left: 0rpx;
-  top: 400rpx;
+  top: 600rpx;
   /* z-index: 1; */
   overflow: hidden;
   /* animation: myfirst 0.5s; */
@@ -89,7 +89,10 @@
 }
 
 .button {
-  height: 60rpx;
-  width: 100%;
-  border: 1px solid #ccc;
+  margin-top: 50rpx;
+  border: 3rpx solid #000000;
+}
+
+.view01 {
+  margin-top: 50rpx;
 }

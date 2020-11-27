@@ -1,19 +1,6 @@
 // pages/baocan/baocan.js
 Page({
-  onLoad: function (options) {
-   var timestamp = Date.parse(new Date());
-   var date = new Date(timestamp);
-   //获取年份  
-   var Y =date.getFullYear();
-   //获取月份  
-   var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-   //获取当日日期 
-   var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(); 
-   //console.log("当前时间：" + Y + '年'  + M+ '月' + D+ '日' ); 
-   this.data.year = Y;
-   this.data.month = M;
-   this.data.day = D;
-  },
+  
   data: {
       select : false,
       department : '',
@@ -21,28 +8,63 @@ Page({
       name : '',
       year : '',
       month : '',
-      day : ''
+      day : '',
+      nextYear : '',
+      nextMonth : '',
+      nextDay : ''
   },
+  onLoad: function (options) {
+    this.getDay();
+    this.getNextDay();
+},
   handleChange(e){
     let gen = e.detail.value;
     this.setData({
        gender : gen
     })
   },
+
+getDay(){
+  var timestamp = Date.parse(new Date());
+  var date = new Date(timestamp);
+  //获取年份  
+  var Y =date.getFullYear();
+  //获取月份  
+  var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+  //获取当日日期 
+  var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate(); 
+  console.log("当前时间：" + Y + '年'  + M+ '月' + D+ '日' ); 
+  this.data.year = Y;
+  this.data.month = M;
+  this.data.day = D;
+},
+
+getNextDay(){
+  var curDate = new Date();
+  var nextDate = new Date(curDate.getTime() + 24*60*60*1000);
+  //获取年份  
+  var Y =nextDate.getFullYear();
+  //获取月份  
+  var M = (nextDate.getMonth() + 1 < 10 ? '0' + (nextDate.getMonth() + 1) : nextDate.getMonth() + 1);
+  //获取当日日期 
+  var D = nextDate.getDate() < 10 ? '0' + nextDate.getDate() : nextDate.getDate(); 
+  console.log("明天时间：" + Y + '年'  + M+ '月' + D+ '日' ); 
+  this.data.nextYear = Y;
+  this.data.nextMonth = M;
+  this.data.nextDay = D;
+},
+
 bindShowMsg() {
      this.setData({
          select:!this.data.select
-     })
-    
-     
+     })        
 },
 
 setName(e){
-  console.log(e.detail.value)
-  this.setData({
-    name : e.detail.value
-
-})
+    //console.log(e.detail.value)
+    this.setData({
+      name : e.detail.value
+  })
 },
 
 mySelect(e) {
@@ -53,7 +75,6 @@ mySelect(e) {
     })
 },
     submit(e) {
-   //   console.log("全局变量"+this.data.gender)
       console.log('当前时间：' + this.data.year + this.data.month + this.data.day)
    //   console.log('进入提交流程')
       console.log('姓名：' + this.data.name)
